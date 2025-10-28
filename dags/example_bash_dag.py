@@ -31,7 +31,7 @@ with DAG(
 
     t2 = BashOperator(
         task_id='print_env',
-        bash_command='env | head -20',
+        bash_command='env | head -20 && sleep 300',
     )
     
     t3 = BashOperator(
