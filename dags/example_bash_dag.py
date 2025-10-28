@@ -35,7 +35,7 @@ with DAG(
     )
     
     t3 = BashOperator(
-        task_id='wait time',
+        task_id='wait_time',
         bash_command='sleep 600',
     )
 
