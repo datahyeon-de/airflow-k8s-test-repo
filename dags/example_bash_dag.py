@@ -33,6 +33,11 @@ with DAG(
         task_id='print_env',
         bash_command='env | head -20',
     )
+    
+    t3 = BashOperator(
+        task_id='wait time',
+        bash_command='sleep 600',
+    )
 
-    t1 >> t2
+    t1 >> t2 >> t3
 
