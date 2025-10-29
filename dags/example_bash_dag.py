@@ -31,12 +31,12 @@ with DAG(
 
     t2 = BashOperator(
         task_id='print_env',
-        bash_command='env | head -20 && sleep 300',
+        bash_command='env | head -20 && sleep 60',
     )
     
     t3 = BashOperator(
         task_id='wait_time',
-        bash_command='sleep 600',
+        bash_command='sleep 60',
     )
 
     t1 >> t2 >> t3
